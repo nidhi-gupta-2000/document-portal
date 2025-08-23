@@ -8,7 +8,7 @@
   "containerDefinitions": [
     {
       "name": "document-portal-container",
-      "image": "459497895986.dkr.ecr.us-east-1.amazonaws.com/documentportal",
+      "image": "142426061489.dkr.ecr.us-east-1.amazonaws.com/documentportalliveclass:77a254a1e82c34bc4b3d035d5e5662c661e695a1",
       "cpu": 1024,
       "essential": true,
       "portMappings": [
@@ -27,10 +27,7 @@
         }
       ],
       "secrets": [
-        {
-          "name": "GROQ_API_KEY",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:685057748560:secret:GROQ_API_KEY"
-        },
+        
         {
           "name": "HF_TOKEN",
           "valueFrom": "arn:aws:secretsmanager:us-east-1:142426061489:secret:HF_TOKEN-sUdLKf"
@@ -38,10 +35,6 @@
         {
           "name": "GOOGLE_API_KEY",
           "valueFrom": "arn:aws:secretsmanager:us-east-1:142426061489:secret:GOOGLE_API_KEY-6ui5XH"
-        },
-        {
-          "name": "LANGCHAIN_API_KEY",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:685057748560:secret:LANGCHAIN_API_KEY"
         }
       ],
       "logConfiguration": {

@@ -40,7 +40,9 @@ jobs:
           --template-file .github/workflows/template.yml \
           --stack-name ecr-repo-stack \
           --region ${{ env.AWS_REGION }} \
-          --capabilities CAPABILITY_NAMED_IAM
+          --capabilities CAPABILITY_NAMED_IAM \
+          --parameter-overrides ImageUrl=${{ steps.build-image.outputs.image }}
+
 
     - name: Login to Amazon ECR
       id: login-ecr

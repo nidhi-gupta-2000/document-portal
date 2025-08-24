@@ -22,20 +22,16 @@
       ],
       "environment": [
         {
-          "name": "env",
+          "name": "ENV",
           "value": "production"
         }
       ],
       "secrets": [
-        
         {
-          "name": "HF_TOKEN",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:142426061489:secret:HF_TOKEN-sUdLKf"
-        },
-        {
-          "name": "GOOGLE_API_KEY",
+          "name": "API_KEYS",
           "valueFrom": "arn:aws:secretsmanager:us-east-1:142426061489:secret:GOOGLE_API_KEY-6ui5XH"
         }
+        
       ],
       "logConfiguration": {
         "logDriver": "awslogs",

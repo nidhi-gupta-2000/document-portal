@@ -47,7 +47,8 @@ class DocumentAnalyzer:
                 "document_text": document_text
             })
 
-            log.info("Metadata extraction successful", keys=list(response.keys()))
+            log.info("Metadata extraction successful", keys=list(response.keys()) )
+            log.info("data extraction successful", document_text )
             
             return response
 

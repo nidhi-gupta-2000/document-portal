@@ -41,6 +41,7 @@ class DocumentAnalyzer:
             chain = self.prompt | self.llm | self.fixing_parser
             
             log.info("Meta-data analysis chain initialized")
+            log.info("docuemnt_text", document_text )
 
             response = chain.invoke({
                 "format_instructions": self.parser.get_format_instructions(),
@@ -48,7 +49,7 @@ class DocumentAnalyzer:
             })
 
             log.info("Metadata extraction successful", keys=list(response.keys()) )
-            log.info("data extraction successful", document_text )
+           
             
             return response
 

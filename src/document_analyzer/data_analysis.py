@@ -41,7 +41,8 @@ class DocumentAnalyzer:
             chain = self.prompt | self.llm | self.fixing_parser
             
             log.info("Meta-data analysis chain initialized")
-            print(f"docuemnt_text: {document_text}")
+            log.info("document_text: {}".format(document_text))
+
 
             response = chain.invoke({
                 "format_instructions": self.parser.get_format_instructions(),
